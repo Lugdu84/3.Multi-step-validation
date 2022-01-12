@@ -22,7 +22,7 @@ export default function Multiform() {
     <div className='container-multiform'>
       <Indicator />
       { formIndex === 1 ? <CardBegin modifyIndex={modifyIndex} />
-      : formIndex === 2 ? <DietForm />
+      : formIndex === 2 ? <DietForm modifyIndex={modifyIndex} />
       : ""}
     </div>
   )
