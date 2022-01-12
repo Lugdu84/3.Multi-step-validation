@@ -1,5 +1,6 @@
 import React, {useState} from 'react'
-import './Multiform.css'
+import './MultiForm.css'
+import Indicator from './Indicator/Indicator'
 
 export default function Multiform() {
   const [formIndex, setFormIndex] = useState(1)
@@ -10,8 +11,8 @@ export default function Multiform() {
     prefs: {}
   })
   return (
-    <div>
-
+    <div className='container-multiform'>
+      <Indicator />
     </div>
   )
 }
