@@ -26,6 +26,8 @@ export default function Multiform() {
     }
   }
 
+
+
   return (
     <div className='container-multiform'>
       <Indicator />
