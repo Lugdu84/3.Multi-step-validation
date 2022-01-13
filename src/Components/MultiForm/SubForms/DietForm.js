@@ -3,8 +3,14 @@ import './SubForm.css'
 
 export default function DietForm(props) {
 
-  const handleRadio = () => {
+  const [formData, setFormData] = useState({
+    dietForm: 'nodiet'
+  })
 
+  const handleRadio = (e) => {
+    setFormData({
+      dietForm: e.target.value
+    })
   }
 
   const preventFunc = e => e.preventDefault();
@@ -44,7 +50,7 @@ export default function DietForm(props) {
         value="vegan"
         type="radio"
       />
-      <button onClick={() => props.modifyIndex(3)}>Validez</button>
+      <button onClick={() => props.modifyIndex(3, formData)}>Validez</button>
     </form>
   );
 }
