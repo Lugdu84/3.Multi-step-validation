@@ -31,7 +31,7 @@ export default function Allergies(props) {
 
   return (
     <form onSubmit={preventFunc} className="checkbox-form">
-      <p>Quelles sont tes cuisines préférées ?</p>
+      <p>As-tu des allergies ?</p>
       <span>Choix multiples.</span>
       <label htmlFor="milk">Lait</label>
       <input ref={addCheck} value="milk" id="milk" type="checkbox" />
