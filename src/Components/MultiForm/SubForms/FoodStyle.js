@@ -6,12 +6,12 @@ export default function FoodStyle(props) {
   const preventFunc = e => {
     e.preventDefault();
     const styleData = {
-      FoodStyle: []
+      foodStyle: []
     }
 
     allCheckboxes.current.forEach(checkbox => {
       if (checkbox.checked) {
-        styleData.FoodStyle.push(checkbox.value)
+        styleData.foodStyle.push(checkbox.value)
       }
     })
 
