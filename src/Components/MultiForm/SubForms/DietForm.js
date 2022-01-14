@@ -20,6 +20,7 @@ export default function DietForm(props) {
       <p>Quel est ton régime alimentaire ?</p>
       <label htmlFor="nodiet">Pas de régime en particulier</label>
       <input
+        defaultChecked
         onChange={handleRadio}
         name="diet"
         id="nodiet"

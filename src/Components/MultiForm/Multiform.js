@@ -28,18 +28,33 @@ export default function Multiform() {
     }
   }
 
+  const elements = [
+    <CardBegin key={1} modifyIndex={modifyIndex} />,
+    <DietForm key={2} modifyIndex={modifyIndex} />,
+    <FoodStyle key={3} modifyIndex={modifyIndex} />,
+    <Allergies key={4} modifyIndex={modifyIndex} />,
+    <HateLove key={5} modifyIndex={modifyIndex} />,
+    <CardEnd key={6} modifyIndex={modifyIndex} />,
+  ];
+
 
 
   return (
     <div className='container-multiform'>
       <Indicator />
-      { formIndex === 1 ? <CardBegin modifyIndex={modifyIndex} />
+      {elements.map((element, index) => {
+        if ((index + 1) === formIndex) {
+          return elements[index]
+        }
+      })}
+
+      {/* { formIndex === 1 ? <CardBegin modifyIndex={modifyIndex} />
       : formIndex === 2 ? <DietForm modifyIndex={modifyIndex} />
       : formIndex === 3 ? <FoodStyle modifyIndex={modifyIndex}/>
       : formIndex === 4 ? <Allergies modifyIndex={modifyIndex}/>
       : formIndex === 5 ? <HateLove modifyIndex={modifyIndex}/>
       : formIndex === 6 ? <CardEnd modifyIndex={modifyIndex}/>
-      : ""}
+      : ""} */}
     </div>
   )
 }
