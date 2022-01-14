@@ -41,7 +41,7 @@ export default function Multiform() {
 
   return (
     <div className='container-multiform'>
-      <Indicator />
+      <Indicator formIndex={formIndex} />
       {elements.map((element, index) => {
         if ((index + 1) === formIndex) {
           return elements[index]
